@@ -85,24 +85,27 @@ the obsolete roles).
 
 Depending on whether you want to deploy, redeploy or undeploy the servletbridge take one of the following goals.
 
-**Deploy servletbridge**
+*Deploy servletbridge*
 
 This goal must only be used to initially deploy the servletbridge to Tomcat. Once a servletbridge has already
 been deployed to Tomcat this goal does not do anything anymore.
 
-Minimal: `mvn clean install tomcat7:deploy -DtomcatHost=localhost:8080`
+Minimal: `mvn clean install tomcat7:deploy -DtomcatHost=localhost:8080` 
+
 Extended: `mvn clean install tomcat7:deploy -DtomcatHost=localhost:8080 -Pextended`
 
-**Redeploy servletbridge**
+*Redeploy servletbridge*
 
 Once a servletbridge artefact has already been deployed to Tomcat you must use this goal to redeploy any changes.
 
-Minimal: `mvn clean install tomcat7:redeploy -DtomcatHost=localhost:8080`
+Minimal: `mvn clean install tomcat7:redeploy -DtomcatHost=localhost:8080` 
+
 Extended: `mvn clean install tomcat7:redeploy -DtomcatHost=localhost:8080 -Pextended`
 
-**Undeploy servletbridge**
+*Undeploy servletbridge*
 
 If you want to undeploy the servletbridge from your Tomcat instance take this goal.
 
-Minimal: `mvn clean install tomcat7:undeploy -DtomcatHost=localhost:8080`
+Minimal: `mvn clean install tomcat7:undeploy -DtomcatHost=localhost:8080` 
+
 Extended: `mvn clean install tomcat7:undeploy -DtomcatHost=localhost:8080 -Pextended`
