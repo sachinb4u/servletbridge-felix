@@ -24,9 +24,9 @@ bundles, with the exception of [org.json](http://mvnrepository.com/artifact/org.
 into OSGi bundles so no manual work has to be done here. Based on your requirements you can now create either a
 *minimal* or an *extended* version of the servletbridge.
 
-### *Minimal* version
+### *Simple* version
 
-The minimal version only contains the mandatory bundles to run a servletbridge with webconsole support. To create
+The simple version only contains the mandatory bundles to run a servletbridge with webconsole support. To create
 such a servletbridge just clone the project  and navigate to the parent folder. Next run `mvn clean install` from the 
 command line. This will create and fetch all the required artifacts to get a working war file. The following
 screenshot shows the webconsole with all installed bundles.
