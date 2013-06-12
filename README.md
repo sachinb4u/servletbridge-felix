@@ -10,10 +10,8 @@ When searching the web for an OSGi servletbridge implementation you will eventua
 https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-servlet-bridge. 
 When taking a look at the Felix example project mentioned on this website you will possibly notice that the Felix 
 version in question is quite old. I searched the web high and low to find an up2date project that is using
-newer versions but could not fine one*. Therefore I decided to come up with my own project that will take 
+newer versions but could not fine one. Therefore I decided to come up with my own project that will take 
 care of this.
-
-* Just in case that anyone of you does know of such a *working* project please let me know.
 
 
 ## Build & Installation
