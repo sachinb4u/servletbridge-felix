@@ -89,9 +89,9 @@
 
 	<profiles>
 		<profile>
-			<!-- The 'mimimal' profile provides only the absolute minimum of bundles to provide a servlet bridge with webconsole support, 
+			<!-- The 'simple' profile provides only the minimal set of bundles to provide a servlet bridge with webconsole support, 
 				goes to WEB-INF/bundles -->
-			<id>minimal</id>
+			<id>simple</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
@@ -245,7 +245,6 @@
 					<version>${asm.wrapper}</version>
 					<scope>provided</scope>
 				</dependency>
-
 			</dependencies>
 		</profile>
 	</profiles>
