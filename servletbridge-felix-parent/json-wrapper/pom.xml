@@ -10,6 +10,10 @@
 	<packaging>bundle</packaging>
 	<version>2009.02.11</version>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.json</groupId>
@@ -32,6 +36,7 @@
 					<instructions>
 						<Bundle-Version>2009.02.11</Bundle-Version>
 						<Export-Package>org.json;version="2009.02.11"</Export-Package>
+						<Embed-Dependency>json</Embed-Dependency>
 					</instructions>
 				</configuration>
 			</plugin>

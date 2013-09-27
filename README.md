@@ -33,12 +33,7 @@ screenshot shows the webconsole with all installed bundles.
 
 ### *Extended* version
 
-The extended version does not only provide webconsole support but also comes with extended logging support via
-[SLF4J](http://www.slf4j.org/) and [Logback](http://logback.qos.ch/), enhanced HTTP support via 
-[Pax Web](https://ops4j1.jira.com/wiki/display/paxweb/Pax+Web) and a bunch of additional OSGi services and 
-webconsole plugins. To create the extended servletbridge navigate to the parent folder and run 
-`mvn clean install -Pextended` in the command line. As a result you will get a war file that contains all the bundles
-shown in the following screenshot.
+The extended version does not only provide webconsole support but also comes with additional OSGi bundles/services and webconsole plugins. To create the extended servletbridge navigate to the parent folder and run `mvn clean install -Pextended` in the command line. As a result you will get a war file that contains all the bundles shown in the following screenshot.
 
 ![An extended version of the servletbridge](https://raw.github.com/frieder/servletbridge-felix/master/doc/webconsole_extended.png "An extended version of the servletbridge")
 

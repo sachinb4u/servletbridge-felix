@@ -33,9 +33,10 @@
 		<logback.classic>${logback.core}</logback.classic>
 		<osgi.cmpn>4.3.1</osgi.cmpn>
 		<osgi.obr>1.0.2</osgi.obr>
-		<pax.web.api>3.0.0</pax.web.api>
+		<pax.web.api>3.0.2</pax.web.api>
 		<pax.web.extender.war>${pax.web.api}</pax.web.extender.war>
 		<pax.web.spi>${pax.web.api}</pax.web.spi>
+		<pax.web.whiteboard>${pax.web.api}</pax.web.whiteboard>
 		<slf4j.api>1.7.5</slf4j.api>
 		<xbean.finder>3.13</xbean.finder>
 		<xbean.bundleutils>${xbean.finder}</xbean.bundleutils>
@@ -59,7 +60,8 @@
 			<version>${osgi.cmpn}</version>
 		</dependency>
 
-		<!-- Bundles that should be deployed into the embedded OSGi container, goes to WEB-INF/bundles -->
+		<!-- Bundles that should be deployed into the embedded OSGi container, 
+			goes to WEB-INF/bundles -->
 		<!-- Felix Webconsole + dependencies -->
 		<dependency>
 			<groupId>org.apache.felix</groupId>
@@ -89,8 +91,8 @@
 
 	<profiles>
 		<profile>
-			<!-- The 'simple' profile provides only the minimal set of bundles to provide a servlet bridge with webconsole support, 
-				goes to WEB-INF/bundles -->
+			<!-- The 'simple' profile provides only the minimal set of bundles to 
+				provide a servlet bridge with webconsole support, goes to WEB-INF/bundles -->
 			<id>simple</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -104,19 +106,23 @@
 				</dependency>
 			</dependencies>
 		</profile>
+
 		<profile>
-			<!-- The 'extended' profile provides a full-blown ServletBridge that contains additional bundles (Apache Felix Submodules, 
-				Pax Web, SLF4J + bridges), goes to WEB-INF/bundles -->
+			<!-- The 'extended' profile provides a full-blown ServletBridge that contains 
+				additional bundles (Apache Felix Submodules, Pax Web, SLF4J + bridges), goes 
+				to WEB-INF/bundles -->
 			<id>extended</id>
 			<dependencies>
-				<!-- The extended ServletBridge only needs http.bridge instead of http.bundle thanks to Pax Web -->
+				<!-- The extended ServletBridge only needs http.bridge instead of http.bundle 
+					thanks to Pax Web -->
 				<dependency>
 					<groupId>org.apache.felix</groupId>
 					<artifactId>org.apache.felix.http.bridge</artifactId>
 					<version>${felix.httpBundles}</version>
 					<scope>provided</scope>
 				</dependency>
-				<!-- http.bridge requires javax.servlet at build-time, do NOT deploy this to both the WAR and the OSGi container -->
+				<!-- http.bridge requires javax.servlet at build-time, do NOT deploy 
+					this to the WAR and the OSGi container -->
 				<dependency>
 					<groupId>javax.servlet</groupId>
 					<artifactId>javax.servlet-api</artifactId>
@@ -227,6 +233,13 @@
 					<version>${pax.web.spi}</version>
 					<scope>provided</scope>
 				</dependency>
+				<dependency>
+					<groupId>org.ops4j.pax.web</groupId>
+					<artifactId>pax-web-extender-whiteboard</artifactId>
+					<version>${pax.web.whiteboard}</version>
+					<scope>provided</scope>
+				</dependency>
+
 				<dependency>
 					<groupId>org.apache.xbean</groupId>
 					<artifactId>xbean-finder</artifactId>
