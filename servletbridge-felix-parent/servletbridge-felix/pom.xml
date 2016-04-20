@@ -58,6 +58,7 @@
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.compendium</artifactId>
 			<version>${osgi.cmpn}</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Bundles that should be deployed into the embedded OSGi container, 
@@ -87,6 +88,25 @@
 			<version>${json.wrapper}</version>
 			<scope>provided</scope>
 		</dependency>
+<dependency>
+	<groupId>org.apache.felix</groupId>
+	<artifactId>org.apache.felix.gogo.runtime</artifactId>
+	<version>0.10.0</version>
+	<scope>provided</scope>
+</dependency>
+<dependency>
+	<groupId>org.apache.felix</groupId>
+	<artifactId>org.apache.felix.gogo.shell</artifactId>
+	<version>0.10.0</version>
+	<scope>provided</scope>
+</dependency>
+<dependency>
+	<groupId>org.apache.felix</groupId>
+	<artifactId>org.apache.felix.gogo.command</artifactId>
+	<version>0.10.0</version>
+	<scope>provided</scope>
+</dependency>
+
 	</dependencies>
 
 	<profiles>
@@ -289,7 +309,7 @@
 				<executions>
 					<execution>
 						<id>copy-dependencies</id>
-						<phase>package</phase>
+						<phase>compile</phase>
 						<goals>
 							<goal>copy-dependencies</goal>
 						</goals>
